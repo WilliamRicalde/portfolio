@@ -1,10 +1,14 @@
 import Head from 'next/head'
+import { FaArrowDown } from 'react-icons/fa'
 import Navbar from 'components/Navbar'
+import ContactButtons from 'components/ContactButtons'
+import Footer from 'components/Footer'
+import ContactForm from 'components/ContactForm'
+import Proyect from 'components/Proyect'
 
 import style from 'styles/Home.module.css'
-import ContactButtons from 'components/ContactButtons'
 
-export default function Home () {
+export default function Home ({ data }) {
   return (
     <div className={style.container}>
       <Head>
@@ -13,17 +17,68 @@ export default function Home () {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Navbar />
-      <section className={style.hero}>
+      <section className={style.hero} id='main'>
         <div className={style.heroText}>
-          <h3>¡Hola a todos!</h3>
-          <h2>Soy William</h2>
+          <h2>¡Hola a todos!</h2>
+          <h1>Soy William</h1>
           <p>Un frontend developer que le encanta implementar diseños que inspiran y atraen a las personas</p>
           <ContactButtons />
         </div>
         <div className={style.heroImg}>
-          <img src='/person@photo.png' alt='persona sonriente' />
+          <img src='/pixlr-bg-result.png' alt='persona sonriente' />
         </div>
       </section>
+      <section className={style.portfolio} id='proyectos'>
+        <div className={style.portfolioText}>
+          <p>A lo largo de mi carrera como Frontend, he tenido el privilegio de trabajar en proyectos retadores e increibles</p>
+          <span>Aquí hay algunos que me gustaría compartir</span>
+          <FaArrowDown />
+        </div>
+        {
+          data.map(proyect => (
+            <Proyect key={proyect.id} proyect={proyect} />
+          ))
+        }
+      </section>
+      <section className={style.contact} id='hablemos'>
+        <h3>Hablemos</h3>
+        <p>Si está interesado en trabajar conmigo en su próximo proyecto, no dude en ponerse en contacto conmigo.</p>
+        <ContactForm />
+      </section>
+      <Footer />
     </div>
   )
+}
+
+export async function getStaticProps () {
+  // eslint-disable-next-line no-undef
+  const res = await fetch(process.env.NEXT_PUBLIC_API, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    mode: 'no-cors',
+    body: JSON.stringify({
+      query: `
+      query Proyectos {
+        proyects{
+          id
+          title
+          description
+          proyectUrl
+          githubRepo
+          image{
+            url
+          }
+        }
+      }
+      `
+    })
+  })
+
+  const resJson = await res.json()
+
+  return {
+    props: {
+      data: resJson.data.proyects
+    }
+  }
 }

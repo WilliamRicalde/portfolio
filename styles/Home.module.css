@@ -19,13 +19,83 @@
   justify-content: center;
   background-image: url("/background.svg");
   background-repeat: no-repeat;
-  background-position: left;
-  background-size: auto;
+  background-position: center;
   width: 50%;
   height: 100%;
 }
 
 .heroImg img {
   width: 350px;
-  margin-bottom: 6rem;
+  margin-bottom: 10rem;
+}
+
+.portfolioText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.portfolioText p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.portfolioText span {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.portfolioText svg {
+  margin-top: 3rem;
+  font-size: 34px;
+  animation: arrowAnimation 1.5s infinite ease-out;
+}
+
+.contact {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.contact p {
+  font-size: 20px;
+  margin-bottom: 3rem;
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0
+  }
+  30% {
+    opacity: 1
+  }
+  60% {
+    opacity: 1
+  }
+  to {
+    transform: translateY(10px);
+    opacity: 0
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .container {
+    width: 100vw;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+  }
+
+  .heroText {
+    width: 90%;
+    text-align: center;
+  }
+
+  .heroImg {
+    width: 90%;
+  }
 }

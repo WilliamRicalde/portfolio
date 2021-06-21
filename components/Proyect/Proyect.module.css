@@ -1,0 +1,45 @@
+.proyect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 3rem auto;
+}
+
+.proyectTxt{
+  width: 50%;
+}
+
+.proyectTxt p {
+  font-family: 'Oxygen';
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.005em;
+}
+
+.proyectImg {
+  width: 50%;
+}
+
+.proyectImg img {
+  border-radius: 5px;
+}
+
+.proyectTxt button {
+  background: #42E2B8;
+  border: 2px solid #0F0A0A;
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 90px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-family: "Oxygen";
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+}
+
+.proyectTxt button:hover {
+  transform: scale(1.02);
+  transition: all .1s ease;
+}
