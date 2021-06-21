@@ -1,8 +1,8 @@
-#Personal portfolio
+# Personal portfolio
 
 This is my personal portfolio, some of my proyects are listed here
 
-###Tecnologies
+### Tecnologies
 
 - Nextjs
 - Graphql
