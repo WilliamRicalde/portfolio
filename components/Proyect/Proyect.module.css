@@ -23,6 +23,7 @@
 
 .proyectImg img {
   border-radius: 5px;
+  width: 500px;
 }
 
 .proyectTxt button {
@@ -57,5 +58,15 @@
   .proyectImg {
     width: 100%;
     margin-top: 3rem;
+  }
+
+  .proyectImg img{
+    width: 350px;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1080px) {
+  .proyectImg img{
+    width: 350px;
   }
 }

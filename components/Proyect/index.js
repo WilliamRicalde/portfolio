@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 import style from './Proyect.module.css'
@@ -17,7 +16,7 @@ const Proyect = ({ proyect }) => {
         </div>
       </div>
       <div className={style.proyectImg}>
-        <Image src={image.url} width={500} height={250} />
+        <img src={image.url} alt='pagina web' />
       </div>
     </div>
   )
