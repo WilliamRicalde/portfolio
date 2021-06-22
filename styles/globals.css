@@ -16,8 +16,7 @@ h1 {
   font-family: Oxygen;
   font-weight: bold;
   font-size: 95px;
-  line-height: 1rem;
-  letter-spacing: -0.015em;
+  line-height: 6rem;
 }
 
 h2 {
@@ -31,8 +30,8 @@ h2 {
 h3 {
   font-family: Oxygen;
   font-weight: bold;
-  font-size: 48px;
-  line-height: 3.5rem;
+  font-size: 45px;
+  line-height: 50px;
 }
 
 h4 {
@@ -49,13 +48,19 @@ h5 {
   line-height: 1rem;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  html,
-  body {
-    width: 100vw;
+@media (min-width: 320px) and  (max-width: 1024px) {
+  h1{
+    font-size: 60px;
+    line-height: 70px;
   }
 
-  #__next {
-    width: 100vw;
+  h2{
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  h4 {
+    font-size: 35px;
+    line-height: 40px;
   }
 }

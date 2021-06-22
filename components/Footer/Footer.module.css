@@ -24,3 +24,17 @@
   line-height: 23px;
   letter-spacing: 1.25px;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    display: none;
+  }
+
+  .logo {
+    margin: 1rem 0;
+  }
+}

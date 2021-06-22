@@ -57,13 +57,17 @@
   transition: all .1s ease;
 }
 
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 360px) and (max-width: 480px) {
   .nav{
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
   }
 
   .buttons {
     display: none;
+  }
+
+  .primary {
+    width: 40%;
   }
 }

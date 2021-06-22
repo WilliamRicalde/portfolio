@@ -3,11 +3,11 @@ import style from './Buttons.module.css'
 
 const ContactButtons = () => {
   return (
-    <div>
-      <button className={style.button}><FaPhoneAlt /></button>
-      <button className={style.button}><FaEnvelope /></button>
-      <button className={style.button}><FaInstagram /></button>
-      <button className={style.button}><FaTwitter /></button>
+    <div className={style.container}>
+      <a className={style.button}><FaPhoneAlt /></a>
+      <a className={style.button}><FaEnvelope /></a>
+      <a className={style.button}><FaInstagram /></a>
+      <a className={style.button}><FaTwitter /></a>
     </div>
   )
 }
