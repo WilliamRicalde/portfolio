@@ -1,4 +1,4 @@
-import ContactButtons from 'components/ContactButtons'
+import ContactButtons from '../ContactButtons'
 
 import style from './Footer.module.css'
 

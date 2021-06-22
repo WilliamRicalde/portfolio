@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import { FaArrowDown } from 'react-icons/fa'
-import Navbar from 'components/Navbar'
-import ContactButtons from 'components/ContactButtons'
-import Footer from 'components/Footer'
-import ContactForm from 'components/ContactForm'
-import Proyect from 'components/Proyect'
+import Navbar from '../components/Navbar'
+import ContactButtons from '../components/ContactButtons'
+import Footer from '../components/Footer'
+import ContactForm from '../components/ContactForm'
+import Proyect from '../components/Proyect'
 
-import style from 'styles/Home.module.css'
+import style from '../styles/Home.module.css'
 
 export default function Home ({ data }) {
   return (
