@@ -1,13 +1,12 @@
-import { FaPhoneAlt, FaEnvelope, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa'
 import style from './Buttons.module.css'
 
 const ContactButtons = () => {
   return (
     <div className={style.container}>
-      <a className={style.button}><FaPhoneAlt /></a>
-      <a className={style.button}><FaEnvelope /></a>
-      <a className={style.button}><FaInstagram /></a>
-      <a className={style.button}><FaTwitter /></a>
+      <a href='tel:987-800-3462' className={style.button}><FaPhoneAlt /></a>
+      <a href='mailto:williamhuchim@gmail.com' className={style.button}><FaEnvelope /></a>
+
     </div>
   )
 }
