@@ -11,8 +11,8 @@ const Proyect = ({ proyect }) => {
         <h4>{title}</h4>
         <p>{description}</p>
         <div>
-          <Link href={githubRepo}><button>Ver código</button></Link>
-          <Link href={proyectUrl}><button>Ver proyecto</button></Link>
+          <Link href={githubRepo}><button className={style.secondary}>Ver código</button></Link>
+          <Link href={proyectUrl}><button className={style.primary}>Ver proyecto</button></Link>
         </div>
       </div>
       <div className={style.proyectImg}>
